@@ -1,3 +1,4 @@
+
 # Install kubernetes 1.30 on ubuntu 22.04
 
 ## Set ip address and VPN :)
