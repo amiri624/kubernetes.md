@@ -423,8 +423,9 @@ systemctl status kubelet.service
 
 (Optional) Enable the kubelet service before running kubeadm:
 
+```bash
 sudo systemctl enable --now kubelet
-
+```
 ### Step 12: Initialize the Kubernetes Cluster (Calico and flannel)
 
 To start your Kubernetes cluster, you need to run the `kubeadm init` command on your master node. This command initializes the cluster with a specific configuration.
