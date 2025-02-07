@@ -15,5 +15,5 @@ ping k8s1
 ```
 ```bash
 vim /etc/hosts/
-### add ip adress all server
+### add ip adress all server ende line
 ```
