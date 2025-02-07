@@ -9,17 +9,14 @@
 First, set the hostname on each node as follows:
 
 - On k8s1:
-
   ```bash
   hostnamectl set-hostname k8s1
   ```
-
 - On k8s2:
 
   ```bash
   hostnamectl set-hostname k8s2
   ```
-
 - On k8s3:
 
   ```bash
