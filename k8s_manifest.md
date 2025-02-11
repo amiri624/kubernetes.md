@@ -2,7 +2,7 @@
 ### Many applications require multiple resources to be created, such as a Deployment
 ### along with a Service. Management of multiple resources can be simplified by grouping
 ### them together in the same file (separated by --- in YAML). For example:
-## k8s_manifest.yml
+## application/nginx-app.yaml
 
 ```bash
 apiVersion: v1
