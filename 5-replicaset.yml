@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-app
+  namespace: my-ns
+  labels:
+    app.kubernets.io/name: my-app
+    app.kubernets.io/env: development
+spec: 
+  replicas: 4
+  selector:
+    matchLabels:
+      app.kubernets.io/name: my-app
+  template:
+    metadata:
+      lebels:
+        app.kubernets.io/name: my-app
+    spec:
+      containers:
+       - name: nginx
+         image: nginx
