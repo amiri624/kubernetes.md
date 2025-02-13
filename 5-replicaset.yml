@@ -4,18 +4,18 @@ metadata:
   name: my-app
   namespace: my-ns
   labels:
-    app.kubernets.io/name: my-app
-    app.kubernets.io/env: development
-spec: 
+    app.kubernetes.io/name: my-app
+    app.kubernetes.io/env: development
+spec:
   replicas: 4
   selector:
     matchLabels:
-      app.kubernets.io/name: my-app
+      app.kubernetes.io/name: my-app
   template:
     metadata:
       labels:
-        app.kubernets.io/name: my-app
+        app.kubernetes.io/name: my-app
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:1.27
