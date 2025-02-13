@@ -17,5 +17,5 @@ spec:
         app.kubernets.io/name: my-app
     spec:
       containers:
-       - name: nginx
-         image: nginx
+        - name: nginx
+          image: nginx
