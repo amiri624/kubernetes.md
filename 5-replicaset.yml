@@ -13,7 +13,7 @@ spec:
       app.kubernets.io/name: my-app
   template:
     metadata:
-      lebels:
+      labels:
         app.kubernets.io/name: my-app
     spec:
       containers:
