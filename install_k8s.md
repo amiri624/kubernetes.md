@@ -42,12 +42,18 @@ cat /etc/hosts
 # 127.0.0.1 localhost
 # 127.0.1.1 k8s1
 ```
-### k8s1
+### k8s2
+```bash
 cat /etc/hosts
 # 127.0.0.1 localhost
 # 127.0.1.1 k8s2
 ```
-
+### k8s3
+```bash
+cat /etc/hosts
+# 127.0.0.1 localhost
+# 127.0.1.1 k8s3
+```
 ```bash
 cat >> /etc/hosts <<EOF
 172.16.0.10 k8s1
