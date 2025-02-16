@@ -408,7 +408,10 @@ Before installing Kubernetes components, it is critical to verify the authentici
    ```bash
    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
    ```
-
+### see the file
+```bash
+ls -lh /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+```
 This command fetches the GPG key and saves it in a dearmored format in the appropriate directory, preparing your system to securely install verified Kubernetes packages.
 
 
