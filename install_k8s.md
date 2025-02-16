@@ -26,7 +26,15 @@ First, set the hostname on each node as follows:
 #### Update the `/etc/hosts` File
 
 Use the `cat` command with a here-document to append the new host entries directly to `/etc/hosts`. This can be done with root privileges using `sudo`:
-
+### Cheng hosts name
+```bash
+vim /etc/hosts
+### srv1
+127.0.1.1 k8s1
+### srv2
+127.0.1.1 k8s2
+### srv3
+127.0.1.1 k8s3
 ```bash
 cat >> /etc/hosts <<EOF
 172.16.0.10 k8s1
