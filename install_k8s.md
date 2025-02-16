@@ -431,7 +431,10 @@ To install Kubernetes components like `kubelet`, `kubeadm`, and `kubectl`, you m
    # This overwrites any existing configuration in /etc/apt/sources.list.d/kubernetes.list
    echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
    ```
-
+### To be sure
+```bash
+/etc/apt/sources.list.d/kubernetes.list
+```
 2. **Update the apt Package Index**:
    Update the apt package index to include the new repository:
 
