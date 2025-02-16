@@ -50,28 +50,12 @@ vim /etc/hosts
 192.168.73.161 k8s3
 ### k8s1
 ```
-```bash
-cat /etc/hosts
-# 127.0.0.1 localhost
-# 127.0.1.1 k8s1
-```
-### k8s2
-```bash
-cat /etc/hosts
-# 127.0.0.1 localhost
-# 127.0.1.1 k8s2
-```
-### k8s3
-```bash
-cat /etc/hosts
-# 127.0.0.1 localhost
-# 127.0.1.1 k8s3
-```
+### cat all /etc/hosts
 ```bash
 cat >> /etc/hosts <<EOF
-172.16.0.10 k8s1
-172.16.0.11 k8s2
-172.16.0.12 k8s3
+192.168.73.163 k8s1
+192.168.73.160 k8s2
+192.168.73.161 k8s3
 EOF
 ```
 
