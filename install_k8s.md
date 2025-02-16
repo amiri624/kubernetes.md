@@ -32,10 +32,22 @@ Use the `cat` command with a here-document to append the new host entries direct
 vim /etc/hosts
 ### srv1
 127.0.1.1 k8s1
+# ende
+192.168.73.163 k8s1
+192.168.73.160 k8s2
+192.168.73.161 k8s3
 ### srv2
 127.0.1.1 k8s2
+# ende
+192.168.73.163 k8s1
+192.168.73.160 k8s2
+192.168.73.161 k8s3
 ### srv3
 127.0.1.1 k8s3
+# ende
+192.168.73.163 k8s1
+192.168.73.160 k8s2
+192.168.73.161 k8s3
 ### k8s1
 ```
 ```bash
