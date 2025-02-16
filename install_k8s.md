@@ -181,14 +181,14 @@ To create and save the default `containerd` configuration file, follow these ste
   After saving and modifying the configuration file, restart the `containerd` service to apply the changes:
 
   ```bash
-  sudo systemctl restart containerd
+  sudo systemctl restart containerd.service
   ```
 
 - **Verify the Configuration**:
   Ensure that `containerd` is using the new configuration file and is running correctly:
 
   ```bash
-  sudo systemctl status containerd
+  sudo systemctl status containerd.service
   ```
 
 ### Step 5: Update `containerd` Configuration to Use Systemd for Cgroup Management
