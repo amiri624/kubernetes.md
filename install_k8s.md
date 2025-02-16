@@ -279,7 +279,7 @@ After loading the modules, it's good practice to check that they are indeed acti
   # OR
 ```bash
 vim /etc/modules-load.d/modules.conf
-# Ende File
+# Add to the ende of the File
 br_netfilter
 overlay
 ```
