@@ -9,19 +9,20 @@
 First, set the hostname on each node as follows:
 
 - On k8s1:
-  ```bash
-  hostnamectl set-hostname k8s1
-  ```
+```
+```bash
+hostnamectl set-hostname k8s1
+```
 - On k8s2:
 
-  ```bash
-  hostnamectl set-hostname k8s2
-  ```
+```bash
+hostnamectl set-hostname k8s2
+```
 - On k8s3:
 
-  ```bash
-  hostnamectl set-hostname k8s3
-  ```
+```bash
+hostnamectl set-hostname k8s3
+```
 
 #### Update the `/etc/hosts` File
 
@@ -35,6 +36,18 @@ vim /etc/hosts
 127.0.1.1 k8s2
 ### srv3
 127.0.1.1 k8s3
+### k8s1
+```bash
+cat /etc/hosts
+# 127.0.0.1 localhost
+# 127.0.1.1 k8s1
+```
+### k8s1
+cat /etc/hosts
+# 127.0.0.1 localhost
+# 127.0.1.1 k8s2
+```
+
 ```bash
 cat >> /etc/hosts <<EOF
 172.16.0.10 k8s1
