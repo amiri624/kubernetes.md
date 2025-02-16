@@ -276,7 +276,13 @@ After loading the modules, it's good practice to check that they are indeed acti
   ```bash
   lsmod | grep br_netfilter
   ```
-
+  # OR
+```bash
+vim /etc/modules-load.d/modules.conf
+# Ende File
+br_netfilter
+overlay
+```
 If the commands above return output, it confirms that the respective modules are loaded. If there's no output, it may indicate that the module is not loaded or not available in your kernel.
 
 ### Step 7: Configure Kernel Parameters for Networking
