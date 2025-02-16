@@ -181,14 +181,14 @@ To create and save the default `containerd` configuration file, follow these ste
   After saving and modifying the configuration file, restart the `containerd` service to apply the changes:
 
   ```bash
-  sudo systemctl restart containerd.service
+  sudo systemctl restart containerd
   ```
 
 - **Verify the Configuration**:
   Ensure that `containerd` is using the new configuration file and is running correctly:
 
   ```bash
-  sudo systemctl status containerd.service
+  sudo systemctl status containerd
   ```
 
 ### Step 5: Update `containerd` Configuration to Use Systemd for Cgroup Management
@@ -212,10 +212,10 @@ Kubernetes recommends using `systemd` for cgroup management to ensure consistent
    systemctl restart containerd
    systemctl enable containerd
    ```
-
-   ```toml
-   SystemdCgroup = true
-   ```
+### toml
+```bash
+SystemdCgroup = true
+```
 
    If the line doesn't exist, you may need to add it under the appropriate section as shown above.
 
@@ -228,14 +228,14 @@ Kubernetes recommends using `systemd` for cgroup management to ensure consistent
   To apply the changes, restart the `containerd` service:
 
   ```bash
-  sudo systemctl restart containerd
+  sudo systemctl restart containerd.service
   ```
 
 - **Verify the Changes**:
   Check that `containerd` has restarted successfully and is running with the new configuration:
 
   ```bash
-  sudo systemctl status containerd
+  sudo systemctl status containerd.service
   ```
 
 Continuing with your Kubernetes installation guide, the next step involves preparing the Linux kernel for Kubernetes networking by loading specific modules. These modules are crucial for network policies and overlay networks, which are essential for Kubernetes.
