@@ -58,7 +58,13 @@ cat >> /etc/hosts <<EOF
 192.168.73.161 k8s3
 EOF
 ```
-
+### ping all server from other server
+### Thy musst can ping each other 
+```bash
+ping k8s1
+ping k8s2
+ping k8s3
+```
 Continuing with your Kubernetes installation guide, the second step will be disabling swap on all nodes. This is an important prerequisite for Kubernetes as it requires swap to be turned off to function properly.
 
 ### Step 2: Disable Swap on All Nodes
