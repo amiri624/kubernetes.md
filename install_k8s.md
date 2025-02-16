@@ -143,8 +143,8 @@ sudo apt-get update
 3. **Install Docker and `containerd.io`**:
    Now install Docker Engine, CLI, `containerd.io`, and other Docker components:
 
-   ```bash
-   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ```
 
@@ -153,9 +153,9 @@ sudo apt-get update
 - **Verify Installation**:
   Ensure that `containerd` is installed and running correctly:
 
-  ```bash
-  containerd --version
-  ```
+```bash
+containerd --version
+```
 
 This step ensures that each node in your Kubernetes cluster is equipped with `containerd.io`, setting a stable foundation for deploying and managing containerized applications.
 
