@@ -37,6 +37,7 @@ vim /etc/hosts
 ### srv3
 127.0.1.1 k8s3
 ### k8s1
+```
 ```bash
 cat /etc/hosts
 # 127.0.0.1 localhost
