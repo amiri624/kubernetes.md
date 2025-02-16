@@ -433,7 +433,7 @@ To install Kubernetes components like `kubelet`, `kubeadm`, and `kubectl`, you m
    ```
 ### To be sure
 ```bash
-/etc/apt/sources.list.d/kubernetes.list
+cat /etc/apt/sources.list.d/kubernetes.list
 ```
 2. **Update the apt Package Index**:
    Update the apt package index to include the new repository:
