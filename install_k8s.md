@@ -285,7 +285,8 @@ overlay
 ```
 If the commands above return output, it confirms that the respective modules are loaded. If there's no output, it may indicate that the module is not loaded or not available in your kernel.
 
-### Step 7: Configure Kernel Parameters for Networking
+# Step 7:
+### Configure Kernel Parameters for Networking
 
 For Kubernetes to manage and route network traffic effectively, certain kernel parameters need to be configured. One of these parameters is `net.ipv4.ip_forward`, which allows the Linux kernel to forward IP packets between all the network interfaces on the machine. This is essential for proper network operations in a Kubernetes cluster.
 
@@ -296,6 +297,8 @@ For Kubernetes to manage and route network traffic effectively, certain kernel p
 
    ```bash
    sudo vim /etc/sysctl.conf
+   # we must uncomment
+    net.ipv4.ip_forward=1
    ```
 
 2. **Add the IP Forwarding Parameter**:
@@ -336,7 +339,8 @@ sysctl net.ipv4.ip_forward
 
 The output should show `net.ipv4.ip_forward = 1`, indicating that IP forwarding is enabled.
 
-### Step 8: Install Essential System Packages
+# Step 8:
+### Install Essential System Packages
 
 Before proceeding with the Kubernetes components installation, it's important to ensure your system has all the necessary packages installed. These packages are critical for the secure and efficient operation of Kubernetes.
 
