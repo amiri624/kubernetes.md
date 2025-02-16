@@ -24,9 +24,6 @@ hostnamectl set-hostname k8s2
 hostnamectl set-hostname k8s3
 ```
 
-#### Update the `/etc/hosts` File
-
-Use the `cat` command with a here-document to append the new host entries directly to `/etc/hosts`. This can be done with root privileges using `sudo`:
 ### Cheng hosts name
 ```bash
 vim /etc/hosts
@@ -50,7 +47,9 @@ vim /etc/hosts
 192.168.73.161 k8s3
 ### k8s1
 ```
-### cat all /etc/hosts
+#### Update the `/etc/hosts` File
+
+Use the `cat` command with a here-document to append the new host entries directly to `/etc/hosts`. This can be done with root privileges using `sudo`:
 ```bash
 cat >> /etc/hosts <<EOF
 192.168.73.163 k8s1
