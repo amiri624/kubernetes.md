@@ -2,7 +2,8 @@
 
 ## Set ip address and VPN :)
 
-## Step 1: Configure Hostnames and Update `/etc/hosts`
+# Step 1:
+### Configure Hostnames and Update `/etc/hosts`
 
 ### Set the Hostname
 
@@ -66,7 +67,8 @@ ping k8s3
 ```
 Continuing with your Kubernetes installation guide, the second step will be disabling swap on all nodes. This is an important prerequisite for Kubernetes as it requires swap to be turned off to function properly.
 
-### Step 2: Disable Swap on All Nodes
+# Step 2:
+### Disable Swap on All Nodes
 
 Kubernetes requires that swap is disabled on all nodes to ensure consistent performance and resource availability. The swap needs to be disabled before initiating Kubernetes.
 
@@ -107,7 +109,8 @@ free -h
 
 Look under the swap section; it should show 0B indicating that swap is not in use.
 
-### Step 3: Install `containerd.io` Runtime on All Servers
+# Step 3:
+### Install `containerd.io` Runtime on All Servers
 
 `containerd.io` is a lightweight container runtime that is used by Docker and can also be used independently by Kubernetes. To install `containerd.io`, we will set up the Docker repository and install the necessary packages.
 
@@ -160,7 +163,8 @@ containerd --version
 This step ensures that each node in your Kubernetes cluster is equipped with `containerd.io`, setting a stable foundation for deploying and managing containerized applications.
 
 
-### Step 4: Configure `containerd`
+# Step 4: 
+### Configure `containerd`
 
 After installing `containerd.io`, it is important to set up the configuration file to ensure that it is optimized for your Kubernetes setup. This involves generating a default configuration file and placing it in the appropriate directory.
 
@@ -191,7 +195,8 @@ To create and save the default `containerd` configuration file, follow these ste
   sudo systemctl status containerd
   ```
 
-### Step 5: Update `containerd` Configuration to Use Systemd for Cgroup Management
+# Step 5:
+### Update `containerd` Configuration to Use Systemd for Cgroup Management
 
 Kubernetes recommends using `systemd` for cgroup management to ensure consistent and reliable resource handling. This step involves editing the `containerd` configuration file to enable `SystemdCgroup`.
 
@@ -240,7 +245,8 @@ SystemdCgroup = true
 
 Continuing with your Kubernetes installation guide, the next step involves preparing the Linux kernel for Kubernetes networking by loading specific modules. These modules are crucial for network policies and overlay networks, which are essential for Kubernetes.
 
-### Step 6: Load Required Kernel Modules
+# Step 6:
+### Load Required Kernel Modules
 
 Kubernetes requires certain kernel modules to be loaded for its networking components to function properly. Specifically, `br_netfilter` and `overlay` modules are needed to manage network traffic and to support network overlays respectively.
 
@@ -358,7 +364,8 @@ sudo apt-get install ca-certificates curl apt-transport-https conntrack -y
 - **`apt-transport-https`**: Allows the package manager to transfer files and data over HTTPS, ensuring secure communication with repositories.
 - **`conntrack`**: Used for tracking network connections as part of the netfilter project in the Linux kernel, which is important for network management in Kubernetes.
 
-### Step 9: Install Additional System Packages for Kubernetes v1.30
+# Step 9: 
+### Install Additional System Packages for Kubernetes v1.30
 
 As you prepare your system for Kubernetes v1.30, certain packages are required to ensure the system can securely connect to and manage repositories and packages. This step involves installing these necessary packages.
 
@@ -381,7 +388,8 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gpg
 
 Download the public signing key for the Kubernetes package repositories. The same signing key is used for all repositories so you can disregard the version in the URL:
 
-### Step 10: Add the Kubernetes Package Repository Signing Key
+# Step 10: 
+### Add the Kubernetes Package Repository Signing Key
 
 Doc is here: https://v1-30.docs.kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
@@ -408,7 +416,8 @@ Here's the formatted step for adding the Kubernetes apt repository and installin
 
 ---
 
-### Step 11: Add the Kubernetes apt Repository and Install Components
+# Step 11:
+### Add the Kubernetes apt Repository and Install Components
 
 To install Kubernetes components like `kubelet`, `kubeadm`, and `kubectl`, you must first add the appropriate Kubernetes apt repository that contains packages specifically for Kubernetes 1.30. Please adjust the URL if you are using a different minor version of Kubernetes.
 
@@ -462,7 +471,8 @@ systemctl status kubelet.service
 ```bash
 sudo systemctl enable --now kubelet
 ```
-### Step 12: Initialize the Kubernetes Cluster (Calico and flannel)
+# Step 12:
+### Initialize the Kubernetes Cluster (Calico and flannel)
 
 To start your Kubernetes cluster, you need to run the `kubeadm init` command on your master node. This command initializes the cluster with a specific configuration.
 
@@ -511,7 +521,8 @@ kubeadm join 172.16.0.10:6443 --token si409n.4t84qt3y60vlfu7r \
 	--discovery-token-ca-cert-hash sha256:afb455a1be808d2a5687a71d7ca92db4118349736699e59693b66395826a5e48
 ```
 
-### Step 13: Install Flannel as the Network Add-On
+# Step 13: 
+### Install Flannel as the Network Add-On
 
 Once your Kubernetes cluster is initialized, the next step is to install a network add-on to manage the networking between the pods across all nodes. Flannel is a popular choice due to its simplicity and effectiveness.
 
@@ -544,7 +555,8 @@ Once your Kubernetes cluster is initialized, the next step is to install a netwo
 kubernetes addons # search in the internet
 https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
-### Step 14: Set Up Bash Autocompletion for kubectl and kubeadm
+# Step 14: 
+### Set Up Bash Autocompletion for kubectl and kubeadm
 
 Bash autocompletion for `kubectl` and `kubeadm` improves efficiency by reducing the amount of typing needed and helping to prevent command line mistakes.
 
@@ -579,7 +591,8 @@ Bash autocompletion for `kubectl` and `kubeadm` improves efficiency by reducing 
 4. **Verify Autocompletion**:
    Test that the autocompletion works by typing `kubectl get po` followed by the tab key. It should automatically complete to `kubectl get pods` if there are no conflicts with other commands starting similarly.
 
-### Step 15: Manage kubeadm Tokens and Check API Version
+# Step 15: 
+### Manage kubeadm Tokens and Check API Version
 
 Managing tokens ensures that your cluster remains secure by controlling which nodes can join the cluster and when. Additionally, checking the API resources helps understand the capabilities of your Kubernetes cluster.
 
