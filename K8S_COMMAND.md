@@ -14,3 +14,6 @@ kubectl --help
 ```bash
 kubectl completion bash > /etc/bash_completion.d/kubectl
 ```
+```bash
+kubeadm completion bash > /etc/bash_completion.d/kubeadm
+```
