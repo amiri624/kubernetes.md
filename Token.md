@@ -16,3 +16,8 @@ sudo kubeadm token create --ttl 168h --print-join-command
 ```bash
 kubectl get nodes
 ```
+#### This command will display the list of nodes that are part of your cluster.
+## Use the Token for Joining Nodes:
+#### By generating tokens with a longer validity period, you can use them to join nodes without having to worry about their expiration for a longer period.
+####If you want to make the token valid for an extended period (like months or indefinitely), simply adjust the TTL (--ttl option) when creating the token.
+#### Let me know if you need further assistance!
