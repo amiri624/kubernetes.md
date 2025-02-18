@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: myjob
-  namespace:my-ns
+  namespace: my-ns
 spec:
   template:
     spec:
@@ -11,5 +11,5 @@ spec:
           image: alpine
           command:
             - echo
-            - "hello world"
-        restartPolicy: never
+            - "hello, world!"
+      restartPolicy: Never
