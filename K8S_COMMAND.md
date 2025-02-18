@@ -3,6 +3,7 @@
 ```bash
 kubectl get pod -A
 ```
+### image
 ```bash
 crictl image ls
 ```
