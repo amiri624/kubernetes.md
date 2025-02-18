@@ -26,3 +26,6 @@ kubectl api-resources | grep ds
 ```bash
 kubectl get svc -n my-ns
 ```
+```bash
+kubectl delete -f (name.yml)
+```
