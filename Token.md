@@ -8,6 +8,12 @@ sudo kubeadm token create --ttl <time> --print-join-command
 ```bash
 sudo kubeadm token create --ttl 168h --print-join-command
 ```
+# Create a New Token:
+To create a new token and generate a new join command for additional nodes, use the following command. It will create a new token and print the full `kubeadm join` command including the token:
+
+```bash
+kubeadm token create --print-join-command
+```
 #### Here:
 ###### . 168h means 168 hours, which is equivalent to 7 days.
 ###### . --print-join-command prints the full command you need to run to join a node to the cluster using this token.
