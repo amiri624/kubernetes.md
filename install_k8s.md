@@ -589,8 +589,7 @@ Bash autocompletion for `kubectl` and `kubeadm` improves efficiency by reducing 
    ```bash
    source /etc/bash_completion
    ```
-
-   Alternatively, for immediate effect in your current shell session, source the individual completion files:
+Alternatively, for immediate effect in your current shell session, source the individual completion files:
 
    ```bash
    source /etc/bash_completion.d/kubectl
