@@ -16,4 +16,4 @@ spec:
                 - /bin/sh
                 - "-c"
                 - date; echo hello world from kubernets
-           restartPolicy: Never
+            restartPolicy: Never
