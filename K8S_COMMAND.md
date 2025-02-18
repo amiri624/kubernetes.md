@@ -23,3 +23,6 @@ kubectl get pod -A -o wide -w
 ```bash
 kubectl api-resources | grep ds
 ```
+```bash
+kubectl get svc -n my-ns
+```
