@@ -15,10 +15,10 @@ To create a new token and generate a new join command for additional nodes, use 
 kubeadm token create --print-join-command
 ```
 #### Here:
-###### . 168h means 168 hours, which is equivalent to 7 days.
-###### . --print-join-command prints the full command you need to run to join a node to the cluster using this token.
-## Verify the Cluster with kubectl get nodes:
-#### After joining the nodes with the new token, you can verify the nodes in the cluster by running:
+. 168h means 168 hours, which is equivalent to 7 days.
+. --print-join-command prints the full command you need to run to join a node to the cluster using this token.
+ Verify the Cluster with kubectl get nodes:
+ After joining the nodes with the new token, you can verify the nodes in the cluster by running:
 ```bash
 kubectl get nodes
 ```
