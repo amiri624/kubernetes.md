@@ -3,6 +3,7 @@
 ## Set ip address and VPN :)
 
 # Step 1:
+
 ### Configure Hostnames and Update `/etc/hosts`
 
 ### Set the Hostname
