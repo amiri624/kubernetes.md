@@ -93,7 +93,6 @@ This command disables swap immediately. However, to make this change permanent, 
 2. Comment out the line that refers to swap. This line typically contains the word 'swap'. You can comment it out by adding a `#` at the beginning of the line. It might look something like this:
 ```bash
 swapoff -a
-
 sed -i '/swap/s/^\//\#\//g' /etc/fstab
 ```
 
