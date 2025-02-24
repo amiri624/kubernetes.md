@@ -9,7 +9,6 @@
 First, set the hostname on each node as follows:
 
 - On k8s1:
-```
 ```bash
 hostnamectl set-hostname k8s1
 ```
