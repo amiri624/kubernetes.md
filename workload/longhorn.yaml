@@ -1,4 +1,3 @@
-
 ---
 # Builtin: "helm template" does not respect --create-namespace
 apiVersion: v1
