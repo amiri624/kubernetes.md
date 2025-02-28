@@ -16,6 +16,7 @@ metadata:
     app.kubernetes.io/version: v1.8.0
 description: "Ensure Longhorn pods have the highest priority to prevent any unexpected eviction by the Kubernetes scheduler under node pressure"
 globalDefault: false
+
 preemptionPolicy: PreemptLowerPriority
 value: 1000000000
 ---
