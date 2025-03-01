@@ -1,4 +1,4 @@
-## Helm now has an installer script that will automatically grab the latest version of Helm and install it locally.
+# Helm now has an installer script that will automatically grab the latest version of Helm and install it locally.
 You can fetch that script, and then execute it locally. It's well documented so that you can read through it and understand what it is doing before you run it.
 
 ```bash
