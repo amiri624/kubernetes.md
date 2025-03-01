@@ -1,3 +1,4 @@
+
 #  Create a New Token with Extended Validity:
 #### You can create a new token with a custom validity period using the kubeadm token create command.
 #### Command to create a new token:
