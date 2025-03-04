@@ -1,8 +1,9 @@
+
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: sematec-website
-  namespace: my-ns
+  namespace: app1-ng
   labels:
     app.kubernetes.io/name: sematec-website
     app.kubernetes.io/env: development
@@ -16,7 +17,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sematec-website
-  namespace: my-ns
+  namespace: app1-ng
   labels:
     app.kubernetes.io/name: sematec-website
     app.kubernetes.io/env: development
