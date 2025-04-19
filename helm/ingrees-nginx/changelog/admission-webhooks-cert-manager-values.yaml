@@ -1,4 +1,3 @@
-
 controller:
   image:
     repository: ingress-controller/controller
